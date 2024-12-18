@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Logo from "../defaults/Logo";
 import { BsFillPeopleFill } from "react-icons/bs";
@@ -11,6 +12,7 @@ import { IoTicketSharp } from "react-icons/io5";
 import { FaSpotify } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { BiSolidOffer } from "react-icons/bi";
+import { BsCircleSquare } from "react-icons/bs";
 import NavLink from "./NavLink";
 
 export const NAV_LINKS = [
@@ -21,8 +23,8 @@ export const NAV_LINKS = [
     { link: "/wishlist", label: "Wishlist", icon: <FaHeart /> },
     { link: "/offers", label: "Offers", icon: <BiSolidOffer /> },
     { link: "/my tickets", label: "My Tickets", icon: <IoTicketSharp /> },
-    { link: "/play music", label: "Play Music", icon: <FaSpotify /> },
     { link: "/settings", label: "Settings", icon: <IoSettingsSharp /> },
+    { link: "/aboutus", label: "About Us", icon: <BsCircleSquare /> },
 ];
 
 const SideBar = () => {

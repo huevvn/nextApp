@@ -21,7 +21,7 @@ const Artist = () => {
                                 >
                                     <source
                                         type="video/mp4"
-                                        src="/chromoVid.mp4"
+                                        src="./slider/usedVids/chromoVid.mp4"
                                     />
                                 </video>
                             </div>
@@ -42,7 +42,7 @@ const Artist = () => {
                                 >
                                     <source
                                         type="video/mp4"
-                                        src="/vacvid.mp4"
+                                        src="./slider/usedVids/vacvid.mp4"
                                     />
                                 </video>
                             </div>
@@ -63,7 +63,7 @@ const Artist = () => {
                                 >
                                     <source
                                         type="video/mp4"
-                                        src="/vanman.mp4"
+                                        src="./slider/usedVids/vanman.mp4"
                                     />
                                 </video>
                             </div>
