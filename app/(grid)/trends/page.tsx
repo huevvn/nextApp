@@ -20,7 +20,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/hru.jpg"
+                            src="/usedPics/trendPics/hru.jpg"
                             alt="Hurry Up Tomorrow"
                             layout="fill"
                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
@@ -46,7 +46,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/chromaPlane.webp"
+                            src="/usedPics/trendPics/chromaPlane.webp"
                             alt="Chromakopia"
                             layout="fill"
                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
@@ -74,7 +74,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/kny.png"
+                            src="/usedPics/trendPics/kny.png"
                             alt="Bully"
                             layout="fill"
                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
@@ -99,7 +99,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/ilmond.png"
+                            src="/usedPics/trendPics/ilmond.png"
                             alt="ilmond"
                             layout="fill"
                             className="object-cover object-left transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
@@ -122,7 +122,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/tv0.jpeg"
+                            src="/usedPics/trendPics/tv0.jpeg"
                             alt="TV Girl"
                             layout="fill"
                             className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
@@ -150,7 +150,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/y.jpg"
+                            src="/usedPics/trendPics/y.jpg"
                             alt="Bully"
                             layout="fill"
                             className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
@@ -172,7 +172,7 @@ const page = () => {
                     >
                         {/* Image tag */}
                         <Image
-                            src="/usedPics/utopia.jpg"
+                            src="/usedPics/trendPics/utopia.jpg"
                             alt="ilmond"
                             layout="fill"
                             className="object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"

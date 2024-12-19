@@ -26,7 +26,7 @@ const Artist = () => {
                                 </video>
                             </div>
                         ),
-                        src: "/tyler.jpg",
+                        src: "/slider/usedPics/tyler.jpg",
                         label: "Tyler, The Creator",
                         description:
                             "Experience the electrifying performances by Tyler.", // I want to make new line here
@@ -47,7 +47,7 @@ const Artist = () => {
                                 </video>
                             </div>
                         ),
-                        src: "/vacman.jpg",
+                        src: "/slider/usedPics/vacman.jpg",
                         label: "VACATIONS",
                         description:
                             "Experience the electrifying performances by Tyler.",
@@ -68,7 +68,7 @@ const Artist = () => {
                                 </video>
                             </div>
                         ),
-                        src: "/vansire.jpg",
+                        src: "/slider/usedPics/vansire.jpg",
                         label: "Vansire",
                         description:
                             "Catch the magical moments of Vansire's concert.",

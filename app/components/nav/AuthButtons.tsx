@@ -20,7 +20,7 @@ const CardInfo = ({
                 </Button>
 
                 {/* Profile */}
-                <Button className="bg-green-950 hover:bg-black text-white hover:text-yellow-200 rounded-full px-6 py-7">
+                <Button className="bg-[#050020] hover:bg-black text-white hover:text-yellow-200 rounded-full px-6 py-7">
                     Profile <CgProfile />
                 </Button>
             </div>

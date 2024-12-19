@@ -8,7 +8,7 @@ const Search = () => {
 
     return (
         <div
-            className="group py-3 px-6 rounded-full h-full w-full md:w-[40%] lg:w-full bg-[#660000] flex items-center"
+            className="group py-3 px-6 rounded-full h-full w-full md:w-[40%] lg:w-full bg-[#00030e] flex items-center"
             onClick={() => setIsActive(true)}
         >
             <SearchIcon

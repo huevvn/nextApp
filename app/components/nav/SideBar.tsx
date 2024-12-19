@@ -2,14 +2,12 @@
 
 import React from "react";
 import Logo from "../defaults/Logo";
-import { BsFillPeopleFill } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { MdDashboard } from "react-icons/md";
 import { FaFireFlameCurved } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
 import { IoTicketSharp } from "react-icons/io5";
-import { FaSpotify } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { BiSolidOffer } from "react-icons/bi";
 import { BsCircleSquare } from "react-icons/bs";
