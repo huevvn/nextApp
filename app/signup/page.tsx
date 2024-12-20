@@ -136,7 +136,7 @@ const Page = () => {
                         {error && <p className="text-red-500">{error}</p>}
                         <div className="flex">
                             <Button
-                                className="bg-[#2E073F] text-yellow-200 w-full rounded-full mt-1 mb-3 mr-3 py-5 hover:bg-black hover:text-white"
+                                className="bg-[#010722] text-yellow-200 w-full rounded-full mt-1 mb-3 mr-3 py-5 hover:bg-black hover:text-white"
                                 disabled={loading}
                             >
                                 {loading ? "Signing up..." : "Submit"}

@@ -58,7 +58,7 @@ const Page = () => {
                             />
                         </div>
                         <div className="flex">
-                            <Button className="bg-[#2E073F] text-yellow-200 w-full rounded-full mt-1 mb-3 mr-3 py-5  hover:bg-black hover:text-white">
+                            <Button className="bg-[#010722] text-yellow-200 w-full rounded-full mt-1 mb-3 mr-3 py-5  hover:bg-black hover:text-white">
                                 Submit
                             </Button>
                             <Button className="bg-yellow-300 text-black rounded-full mt-1 mb-3 ml-r py-5 hover:bg-black hover:text-white">
