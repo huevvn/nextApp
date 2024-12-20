@@ -65,9 +65,12 @@ const Page = () => {
                                 Log-in with Google <FaGoogle />
                             </Button>
                         </div>
+                        <p className="underline font-medium  text-yellow-700">
+                            Forgot your password?
+                        </p>
                         <p className="flex">
                             Not a member yet?{" "}
-                            <span className="underline text-blue-700 mx-1">
+                            <span className="underline text-blue-700 ml-1">
                                 <a href="./signup">Create Account!</a>
                             </span>
                         </p>

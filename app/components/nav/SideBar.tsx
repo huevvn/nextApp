@@ -20,7 +20,7 @@ export const NAV_LINKS = [
     { link: "/following", label: "Following", icon: <FaStar /> },
     { link: "/wishlist", label: "Wishlist", icon: <FaHeart /> },
     { link: "/offers", label: "Offers", icon: <BiSolidOffer /> },
-    { link: "/my tickets", label: "My Tickets", icon: <IoTicketSharp /> },
+    { link: "/mytickets", label: "My Tickets", icon: <IoTicketSharp /> },
     { link: "/settings", label: "Settings", icon: <IoSettingsSharp /> },
     { link: "/aboutus", label: "About Us", icon: <BsCircleSquare /> },
 ];

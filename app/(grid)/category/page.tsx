@@ -572,7 +572,7 @@ const page = () => {
                             className="object-cover object-right transition-transform duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:opacity-60"
                         />
                         {/* Overlay text */}
-                        <span className="absolute bottom-4 left-2 text-yellow-300 text-4xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="absolute bottom-4 left-4 text-yellow-300 text-4xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             The Cure{""}
                         </span>
                     </button>

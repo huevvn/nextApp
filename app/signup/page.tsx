@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
     Card,
@@ -8,11 +10,62 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { signIn } from "next-auth/react";
 import { FaGoogle } from "react-icons/fa";
-import React from "react";
+import React, { useState } from "react";
+import { signIn } from "next-auth/react";
 
 const Page = () => {
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    const handleSignup = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setError(null);
+
+        const formData = new FormData(e.target as HTMLFormElement);
+        const data = {
+            fname: formData.get("fname"),
+            lname: formData.get("lname"),
+            email: formData.get("email"),
+            password: formData.get("password"),
+        };
+
+        try {
+            // Call API to create user
+            const res = await fetch("/api/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (res.ok) {
+                const result = await res.json();
+
+                // Sign-in the user after successful signup
+                await signIn("credentials", {
+                    redirect: false,
+                    email: data.email,
+                    password: data.password,
+                });
+
+                // Redirect to dashboard or homepage after signup
+                window.location.href = "/aboutus"; // or any other page you want
+            } else {
+                const text = await res.text();
+                console.error("Error response:", text);
+                setError("Signup failed. Please try again.");
+            }
+        } catch (error) {
+            console.error("Signup error:", error);
+            setError("An error occurred while signing up. Please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <section className="logcss flex h-screen w-full items-center justify-center px-5">
             <Card className="bg-white w-full max-w-lg">
@@ -27,10 +80,7 @@ const Page = () => {
                 </CardHeader>
                 <CardContent>
                     <form
-                        action={async (formData) => {
-                            "use server";
-                            await signIn("nodemailer");
-                        }}
+                        onSubmit={handleSignup}
                         className="flex flex-col gap-y-2"
                     >
                         <div className="flex">
@@ -83,10 +133,14 @@ const Page = () => {
                                 placeholder="Not 12345678"
                             />
                         </div>
+                        {error && <p className="text-red-500">{error}</p>}
                         <div className="flex">
-                            <Button className="bg-[#2E073F] text-yellow-200 w-full rounded-full mt-1 mb-3 mr-3 py-5 hover:bg-black hover:text-white">
-                                Submit
-                            </Button>{" "}
+                            <Button
+                                className="bg-[#2E073F] text-yellow-200 w-full rounded-full mt-1 mb-3 mr-3 py-5 hover:bg-black hover:text-white"
+                                disabled={loading}
+                            >
+                                {loading ? "Signing up..." : "Submit"}
+                            </Button>
                             <Button className="bg-yellow-300 text-black rounded-full mt-1 mb-3 ml-r py-5 hover:bg-black hover:text-white">
                                 Sign-up with Google <FaGoogle />
                             </Button>
