@@ -13,6 +13,14 @@ import { FaGoogle } from "react-icons/fa";
 import React from "react";
 
 const Page = () => {
+    const handleLogin = async (e: React.FormEvent) => {
+        e.preventDefault();
+        const formData = new FormData(e.target as HTMLFormElement);
+        const email = formData.get("email") as string;
+        const password = formData.get("password") as string;
+        await signIn("credentials", { email, password });
+    };
+
     return (
         <section className="landingBG flex h-screen w-full items-center justify-center px-5">
             <Card className="bg-white w-full max-w-lg">
@@ -27,10 +35,7 @@ const Page = () => {
                 </CardHeader>
                 <CardContent>
                     <form
-                        action={async (formData) => {
-                            "use server";
-                            await signIn("nodemailer");
-                        }}
+                        onSubmit={handleLogin}
                         className="flex flex-col gap-y-2"
                     >
                         <div>

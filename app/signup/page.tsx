@@ -1,3 +1,4 @@
+// /app/signup/page.tsx
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -12,11 +13,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { FaGoogle } from "react-icons/fa";
 import React, { useState } from "react";
-import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const router = useRouter();
 
     const handleSignup = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -25,11 +27,12 @@ const Page = () => {
 
         const formData = new FormData(e.target as HTMLFormElement);
         const data = {
-            fname: formData.get("fname"),
-            lname: formData.get("lname"),
-            email: formData.get("email"),
+            username: formData.get("fname"),
             password: formData.get("password"),
+            email: formData.get("email"),
         };
+
+        console.log("Data being sent:", data); // Log the data being sent
 
         try {
             // Call API to create user
@@ -41,26 +44,22 @@ const Page = () => {
                 body: JSON.stringify(data),
             });
 
-            if (res.ok) {
-                const result = await res.json();
+            const result = await res.json(); // Parse the response to JSON
+            console.log("Response:", result);
 
-                // Sign-in the user after successful signup
-                await signIn("credentials", {
-                    redirect: false,
-                    email: data.email,
-                    password: data.password,
-                });
-
-                // Redirect to dashboard or homepage after signup
-                window.location.href = "/aboutus"; // or any other page you want
-            } else {
-                const text = await res.text();
-                console.error("Error response:", text);
-                setError("Signup failed. Please try again.");
+            if (!res.ok) {
+                console.error("API Error:", res.status, res.statusText);
+                throw new Error(result.error || "Unknown error");
             }
-        } catch (error) {
+
+            // Redirect to dashboard or homepage after signup
+            router.push("/aboutus"); // or any other page you want
+        } catch (error: any) {
             console.error("Signup error:", error);
-            setError("An error occurred while signing up. Please try again.");
+            setError(
+                error.message ||
+                    "An error occurred while signing up. Please try again."
+            );
         } finally {
             setLoading(false);
         }
