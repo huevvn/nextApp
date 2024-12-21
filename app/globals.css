@@ -15,11 +15,11 @@
 }
 
 .landingBG {
-    background: rgb(0, 0, 0);
+    background: rgb(48, 0, 0);
     background: linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 71, 1) 100%
+        130deg,
+        rgba(48, 0, 0, 1) 0%,
+        rgba(0, 0, 48, 1) 100%
     );
     background-size: 400% 400%;
     animation: gradientAnimation 5s ease infinite;
@@ -35,15 +35,6 @@
     100% {
         background-position: 0% 50%;
     }
-}
-
-.logcss {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-        45deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(102, 0, 0, 1) 100%
-    );
 }
 
 .trend {

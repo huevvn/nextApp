@@ -19,7 +19,9 @@ const LandingPage = () => {
                     <CardHeader>
                         <CardTitle className="text-black text-5xl md:text-7xl font-black pt-5">
                             Welcome to{" "}
-                            <span className="text-specialColor">HyperSeat</span>
+                            <span className="text-specialColor text-[#700000]">
+                                HyperSeat
+                            </span>
                         </CardTitle>
                     </CardHeader>
                     <CardContent className="mt-10">
@@ -33,12 +35,12 @@ const LandingPage = () => {
                         <div className="flex justify-center gap-4 md:gap-8 mb-10">
                             <a href="/signup">
                                 <Button className="bg-[#010722] text-yellow-200 rounded-full py-4 md:py-6 px-8 md:px-12 text-xl md:text-3xl hover:bg-[#010722] hover:text-white transition duration-300 ease-in-out transform">
-                                    Sign Up
+                                    <p className="my-10">Sign Up</p>
                                 </Button>
                             </a>
                             <a href="/login">
                                 <Button className="bg-yellow-200 text-black rounded-full py-4 md:py-6 px-8 md:px-12 text-xl md:text-3xl hover:bg-black hover:text-white transition duration-300 ease-out transform">
-                                    Log In
+                                    <p className="my-10">Log In</p>
                                 </Button>
                             </a>
                         </div>

@@ -67,7 +67,7 @@ const Page = () => {
     };
 
     return (
-        <section className="logcss flex h-screen w-full items-center justify-center px-5">
+        <section className="landingBG flex h-screen w-full items-center justify-center px-5">
             <Card className="bg-white w-full max-w-lg">
                 <CardHeader>
                     <CardTitle className="text-black text-4xl font-black py-5">
