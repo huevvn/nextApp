@@ -3,7 +3,7 @@ import GridContainer from "../components/defaults/GridContainer";
 import SideBar from "../components/nav/SideBar";
 import NavBar from "../components/nav/NavBar";
 import MaxWidthWrapper from "../components/defaults/MaxWidthWrapper";
-import AuthButtons from "../components/nav/AuthButtons";
+import AuthButtons from "../components/nav/TopButtons";
 
 export default function GridLayout({
     children,

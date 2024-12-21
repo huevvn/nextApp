@@ -14,7 +14,7 @@ import { BsCircleSquare } from "react-icons/bs";
 import NavLink from "./NavLink";
 
 export const NAV_LINKS = [
-    { link: "/", label: "Home", icon: <GoHomeFill /> },
+    { link: "/home", label: "Home", icon: <GoHomeFill /> },
     { link: "/trends", label: "Trend", icon: <FaFireFlameCurved /> },
     { link: "/category", label: "Category", icon: <MdDashboard /> },
     { link: "/following", label: "Following", icon: <FaStar /> },
@@ -28,7 +28,7 @@ export const NAV_LINKS = [
 const SideBar = () => {
     return (
         <div className="col-span-2">
-            <div className="h-screen sticky inset-0 py-10 px-10 flex flex-col items-start bg-black/25 rounded-r-3xl text-[#000000]">
+            <div className="h-screen sticky inset-0 py-10 px-10 flex flex-col items-start bg-black/100 rounded-r-3xl text-[#000000]">
                 <Logo />
                 {NAV_LINKS.map((navLink, index) => (
                     <NavLink key={navLink.link || index} navLink={navLink} />
